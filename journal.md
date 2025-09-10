@@ -70,3 +70,35 @@ A = [4, 1, 0, 5, 7, 2, 6, 1]
 #left and all the bigger numbers are right.
 
 
+
+
+09/10/25 - Quick Sort & Modified Quick Sort
+
+A = [3, 7, 5, 2, 0, 7, 6, 4]
+def quicksort(A): # we made this bridge function so you don't have to pass variables to run quicksort
+    quicksortrecursive(A, 0, len(A) - 1) # pivots index is low, first number, A[0] = 5
+def quicksortrecursive(A, low, high):
+    if high - low <= 0: #catches any list with only 1 item
+        return
+    leftmostgreaterthan = low + 1 # = 1
+    for i in range(low + 1, high + 1):
+        if A[i] < A[low]: # moves any value less then the pivot to before the greater thans
+            A[i], A[leftmostgreaterthan] = A[leftmostgreaterthan], A[i]
+            leftmostgreaterthan += 1
+    pivotindex = leftmostgreaterthan - 1
+    A[low], A[pivotindex] = A[pivotindex], A[low]
+    quicksortrecursive(A, low, pivotindex-1) # Recursive part of code, the lower than pivots part
+    quicksortrecursive(A, pivotindex+1, high) # the greater than pivots part
+
+Big order
+Quick sort with random data but with sorted data N^2 (N*N)
+Mergesort is N*Log_2 *N Always
+
+
+Modified Quick Sort
+add after top if statement in regular quick sort:
+    mid = (low+high)//2
+    A[mid], A[low] = A[low], A[mid]
+# this modification only works if people aren't atempting to break the code by making it
+# super long. To be safe use merge sort which is more reliable
+
