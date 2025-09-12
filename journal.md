@@ -102,3 +102,7 @@ add after top if statement in regular quick sort:
 # this modification only works if people aren't atempting to break the code by making it
 # super long. To be safe use merge sort which is more reliable
 
+
+09/11/25 - User Stories
+
+Format: As a _______ I want ______________, So that __________
