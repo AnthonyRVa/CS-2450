@@ -106,3 +106,19 @@ add after top if statement in regular quick sort:
 09/11/25 - User Stories
 
 Format: As a _______ I want ______________, So that __________
+
+09/17/25 - 
+
+Abstract Data Type      VS.      Full Details
+<-------------------------------------------->
+(Teaching someone about a car)
+Steering wheel                      Car engine
+Gas petal               (Every part of engine)
+Break petal                             Etc.
+Ignition
+
+Abstract data type - Main functions of a program
+
+Full Details - How you'll make the main functions work
+As a programer first worry about the big things to add, then how to add and make them work.
+
