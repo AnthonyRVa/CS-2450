@@ -122,3 +122,75 @@ Abstract data type - Main functions of a program
 Full Details - How you'll make the main functions work
 As a programer first worry about the big things to add, then how to add and make them work.
 
+
+09/22/25 - Github Merging Branches, 
+
+When encountering a merge conflict type this:
+    git pull --no-rebase
+This makes git attempt to merge automatically if possible.
+Most the time this will work but when it won't is when two people have written on 
+the same line on the same file.
+
+If it can't an error message like this will be shown:
+##################################################################
+jeffcompas ~/UtahTech/CS2450 $ git pull --no-rebase
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 374 bytes | 62.00 KiB/s, done.
+From github.com:JeffCompasClassrooms/testing-units-with-tdd-f25-jeffozozo
+
+   d109c88..be8fc6c  main       -> origin/main
+
+Auto-merging Requirements_spec.md
+CONFLICT (content): Merge conflict in Requirements_spec.md
+Automatic merge failed; fix conflicts and then commit the result.
+##################################################################
+
+At the bottom it shows "Automatic merge failed", this means git couldn't resolve the
+merge conflict and has left it to us too. When this happens it'll make you go into the changed
+files listed above in the 2nd to last line.
+
+Go into that file and you'll see:
+##################################
+ 15 <<<<<<< HEAD
+ 16 Four score and seven years ago...
+ 17 
+ 18 We hold these truths to be self evident... 
+ 19 =======
+ 20 Four score and seven years ago...
+ 21 
+ 22 Now is the time for all good men to come to the aid of their country
+ 23 >>>>>>> 75ad130f8df35f5603f2b1f8df7a1d023bd1e083
+####################################################
+
+The merge error is surroned by:
+>>>>>> Head 
+....
+>>>>>> Memory location of error
+
+Inside this you'll see two versions of the same part seperated by =====.
+To solve the merge conflict you have to pick one to keep.
+To do so you have to delete everything but the lines you want to keep,
+even the <<<<<<, other version, and ===== so you should be just be left with:
+
+ 20 Four score and seven years ago...
+ 21
+ 22 Now is the time for all good men to come to the aid of their country
+
+------------------------------------------------------
+Data Structure Class: 
+Bag Assignment:
+    Containers for Bag Assignment
+    Abstract Data Types Vs Implementation (Teaching the basics Vs Teaching how to make it/implement)
+    ADT specifics for bag
+    Student Objects (classes type)
+    Main Function
+    Implement Bag Using Python List
+    File Structure
+
+Containers(type of data/list) we'll use is: 
+    unsorted 
+    non repeat(no duplicates)
+
