@@ -126,7 +126,7 @@ As a programer first worry about the big things to add, then how to add and make
 09/22/25 - Github Merging Branches, 
 
 When encountering a merge conflict type this:
-    git pull --no-rebase
+    git pull -no-rebase
 This makes git attempt to merge automatically if possible.
 Most the time this will work but when it won't is when two people have written on 
 the same line on the same file.
@@ -194,3 +194,21 @@ Containers(type of data/list) we'll use is:
     unsorted 
     non repeat(no duplicates)
 
+09-29-25
+
+Adding Numbers: N
+Multiplying Numbers: 2N^2 --> N^2 (same as 2N^2)
+Matrix's (3x3): N^3
+Exponential Algorithms/Intractible: Big O's that are to big/unsolvable
+and the Big O's for them are: 2^N(SAT/Boolean Problem), N!(TSP), & 10^(n/2)(RSA)
+
+NP - Non deterministic polynomial (Given the answer(not solving), you can verify it in polynomial time.)
+    SAT(Boolean Problem), Traveling Sales Man Problem, RSA(Factoring Problem) are all verifyable in polynomial time(Not Solvable in polynomial time).
+
+NP Complete - A portion of problems that can be converted to an SAT(Boolean Problem)
+
+All the problems above can be converted into a SAT(Boolean Problem), meaning if anyone managed to solve SAT problem, They would be able to solve all NP(Problems not able to be solved in polynomial time) problems in polynomial time includingproblems like TSP, Factoring, etc.
+
+To make NP = P you have to solve any problem in NP in P(polynomial) time
+
+NP != NP Complete
