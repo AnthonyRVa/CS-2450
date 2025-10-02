@@ -212,3 +212,64 @@ All the problems above can be converted into a SAT(Boolean Problem), meaning if 
 To make NP = P you have to solve any problem in NP in P(polynomial) time
 
 NP != NP Complete
+
+10-01-25
+
+CS2420 - Topics
+
+Big O's-
+Array = python list
+Array Lookups - Big O of 1 (index = number, A[index])
+Array Append/Push - 1 (A.append[x])
+Array Pop - 1 (A.pop())
+Array Pop(index) - N (A.pop(index) bigger because you have to shift list for removed item)
+    To Pop(index) = 1, flip last number of list with the index and then pop so you don't have to shift whole list.
+
+NP Cirlce Vs NP Ring:
+
+NP Circle - Problems that can be checked/verified in P-time
+    P are the easy problems that can be done in polynomial time
+    NP are the difficult problems that can't be solved in polynomial time but can be checked in polynomial time with given answers
+
+
+NP Ring is problems that can be verified in P-time
+    and we believe these problems take exponential time to solve
+
+Remember anything in NP Complete, if solved in polynomial time, can make any problem in NP can solvable in P-time
+
+
+Create unique random lists
+
+def ranuniquelist(n): # big O of N^3
+    A = []
+    while len(A)<n: # one N^2 for Big O (since the more you have added the harder it'll be to pick a num that's not in the list already)
+        num = random.randrange(0,n):
+        if num is not in A: # Another N for Big O
+            A.append(num)
+    return A
+
+Better version:
+
+def ranuniquelist(n): # Big O of N
+    A=[]
+    for i in range(N):
+        A.append(i)
+    for i in range(N):
+        R= -------
+        A[i], A[R] = A[R], A[i]
+
+> Binary Search
+
+def binarysearch(A,x):
+# A must be sorted or youll need to use linear search
+low = 0
+high = len(A)-1
+while high-low >= 0:
+    mid = (low+high)//2
+    if A[mid] == x:
+        return mid
+    elif x < A[mid] # left of list
+        high = mid-1
+    else: # if x is bigger than mid right side of list
+        low = mid + 1
+return -1
