@@ -273,3 +273,47 @@ while high-low >= 0:
     else: # if x is bigger than mid right side of list
         low = mid + 1
 return -1
+
+log base 2 of 510,000,000 is 19
+
+4^15 is 1 billion b/c (2^2)^15 -> 1 billion
+
+binary search is Log of N
+Shaker sort mostly sorted N (If unsorted would equal N^2)
+Traveling sales person is N!
+Factoring 10^(n/2)
+Multiply NxN matrix N^3
+
+When is Big O analysis most important:
+When N is very large, When a program is slow
+
+        Random, Worst,  Best
+Shaker    N^2    N^2     N
+Quick    N LogN  N^2    N Log N
+merge   N Log N  N logN N Log N
+
+Which would be best to prove, P=NP or P != NP,What proof would you need
+P != NP is believed to be true, Prove any problem in NP will never be able to be solved in P
+
+one pass of quick sort for list of 5 7 3 1 6 8 4 9 0
+pivot = 5
+5 3 1 4 0 8 7 9 6
+0 3 1 4 5 8 7 9 6
+
+for loop N time
+    call function that does N^2
+    for loop N times
+        For loop N times
+            call function that does N
+
+N^2 * N^3 = N^3
+
+N * N^3 = N^4
+
+crete mostly sorted list code
+
+def createmostlysortedlist(size):
+    A = createRandomlist(size)
+    A.sort()
+    A[0],A[-1] = A[-1],A[0]
+    return A
