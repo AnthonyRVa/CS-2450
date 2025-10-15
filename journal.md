@@ -215,7 +215,7 @@ NP != NP Complete
 
 10-01-25
 
-CS2420 - Topics
+CS-2420 - Topics
 
 Big O's-
 Array = python list
@@ -317,3 +317,29 @@ def createmostlysortedlist(size):
     A.sort()
     A[0],A[-1] = A[-1],A[0]
     return A
+
+10-13-25 LINKED LIST
+
+problems with python list:
+requires continous memoery(ram)
+order n to add or delete things
+
+Linked list will solve this
+
+Linked List (used for memory):
+not continous(scattered randomly). It has a pointer that connects to first item from an unorganized list.
+Holds the next address in memory for the next item.(keeping it organized but being able to be scattered out)
+
+Linked List Advantages:
+Can fill up all memory in ram
+really easy to link and unlink
+Holds the 4 byte address to the next item
+Not expensive to delete something in the middle. (changes address route from previous item to a valid item after the deleted item)
+The above is only true if we know where it is.
+Really fast for Deque
+
+When making an item you make two things:
+4 byte pointer (an address that points two where the item is)
+Item is the actual item you create in a random spot in memory(RAM)
+
+
