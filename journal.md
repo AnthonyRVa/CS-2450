@@ -342,4 +342,65 @@ When making an item you make two things:
 4 byte pointer (an address that points two where the item is)
 Item is the actual item you create in a random spot in memory(RAM)
 
+10-20-25
 
+Talk About: Linked List, variants of linked list, stacks, queues
+
+Circular Linked List - A linked list that instead of having a none for the end of the list, you'll point back to the first node
+
+Double Linked List - A linked list with the node having a previous address, item, and the next address. Simply a linked list with the node having the address of the node that came before it.
+
+---------------------------------
+A stack is an abstract data type(ADT).
+It only serves to contain info with only four operations:
+Push(add)
+Pop(remove)
+Top(look at top)
+IsEmpty(Checks if is empty)
+(You can use python list or linked list for this)
+
+class Stack:
+
+def __init__(self):
+    self.items = []
+
+def push(self,item):
+    self.items.append(item)
+
+def pop(self)
+
+first item added, is the last one to get removed
+last item in, is first item out
+(just like a stack of papers)
+----------------------------------
+Queue
+First item in, first item out (FILO)
+last item in last item out (LILO)
+
+Think of it as a line people line up for. Use Circular Linked List with a back pointer for this system
+
+Queue uses:
+deque, enqueue, 
+
+class Queue:
+
+    def __init__(self):
+        self.items = []
+        self.back =  # This is a pointer that sets the address to the end of the list
+
+    def enqueue(self, item):
+        n = Node(item, None) # Node is the class Node used for linked list
+        n.nxt = self.back.nxt
+        self.back.nxt = n
+        self.back = n
+    
+    def dequeue(self):
+        x = self.back.nxt.item # this is the first node(but only item so no .nxt) in the list
+        self.back.nxt = self.back.nxt.nxt
+        return x
+
+        """
+        x = self.back.nxt
+        self.back.nxt = x.nxt
+        return x
+        """
