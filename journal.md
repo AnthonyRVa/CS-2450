@@ -404,3 +404,45 @@ class Queue:
         self.back.nxt = x.nxt
         return x
         """
+
+10-22-25
+
+BST (Binary Search Tree or Binary Sorted Tree)
+
+Makes data sorted and organized. Which makes it easier to search through.
+
+self.root = the first item inserted or none when there is nothing.
+
+nodes in BST have left, item, and right. Anyhting to the left and right of an item is considered a descendent. Also, if you pass in organized data, the BTS just makes a super long Linked List.
+No Duplicates are allowed for BST
+Depth = the longest chain from self.root to the lowest node.
+Big O of BST = log_2 N -> log N
+Depth of BST < 2 Actual Depth of BST (check if the actual depth of the BST is under 2* the best depth)
+
+BST Delete -
+deleting leaf node - just set its parents connection to None
+deleting a node with one child - set children to nodes parent
+deleting node with two children - go down the left side of the node once to reach it's one child, then grab the furthest far right node there and swap it with the node to be deleted then delete it.
+
+New node code:
+
+class Node:
+    
+    def __init__(self, item):
+        self.item = item
+        self.left = None
+        self.right = None
+
+def delete(self, item):
+    if not self.exists(item): # makes sure item is actually in list
+        return False
+    self.deleteR(item, self.root) #recursive part
+    return True
+
+def deleteR(self, item, current):
+    if item < current.item: # which path to take, if the item were looking for is bigger or smaller
+        self.deleteR(item, current.left)
+    elif:
+        self.deleteR(item, current.right)
+    else:
+        #delete
