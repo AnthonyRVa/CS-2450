@@ -446,3 +446,7 @@ def deleteR(self, item, current):
         self.deleteR(item, current.right)
     else:
         #delete
+
+10-31-25
+
+Do the BST tree assignment
