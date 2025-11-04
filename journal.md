@@ -450,3 +450,49 @@ def deleteR(self, item, current):
 10-31-25
 
 Do the BST tree assignment
+
+11-3-25
+
+BST tree degenerates, so don't use.
+
+2-3 Tree
+(don't need to make but know what it is, how to insert, delete and understand)
+Has two nodes, one with two pointers and an item
+another one with 3 pointers and 2 items.
+
+This Algotithim must be FULL. ALWAYS!
+(By full it must have the max depth match the depth of every branch)
+
+How to insert in 2-3 tree:
+1st insert:
+self.root = a two node
+2nd insert:
+self.root = a three node (None, 2nd #, None, 1st #, None)
+3rd insert:
+3 two nodes, self.root=1st num, self.root.left = 3rd num, self.root.r = 2nd num
+4th insert:
+2 two nodes 1 three node, self.root.r= None, 4th #, None, 3rd #, None
+5th insert:
+2 two nodes, 1 three node, self.root = self.root.l, 1st $, self.root.m, 3rd #, self.root.r
+
+Properties of 2-3 Tree
+Inserting 1mil items
+Worst case: 20 deep, Big-O = log_2 N
+Best case: 13 deep, Big-O = log_3 N
+expected case: 13-20 deep
+DOESN'T DEGENERATE
+
+Delete:
+Rules - 
+Given an item to delete, make sure it's a leaf node(Node at the end of the tree)
+If it's not a leaf node go left one and down right all the way like in bst.
+
+Delete Item in leaf node, If it's a three node it's ok.
+If it's a two node, theres a whole and you need to fix it.
+Borrow from a sibling, if possible (sibling is far right,
+push him up to parents, grab the middle value of the three
+node with 3 items and push it down.) Demote parent into sibling
+(make parent, 3 node, into two and move 2nd item down and make it into 3 node)
+If you demote a two node, leaving parent of hole empty, then recurse, delete parent.
+This makes the parents parent go into the sibling and turn it into a 3 node, with
+the pointer pointing to the newly formed 3 node.
