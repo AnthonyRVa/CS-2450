@@ -496,3 +496,24 @@ node with 3 items and push it down.) Demote parent into sibling
 If you demote a two node, leaving parent of hole empty, then recurse, delete parent.
 This makes the parents parent go into the sibling and turn it into a 3 node, with
 the pointer pointing to the newly formed 3 node.
+
+11-5-25
+
+AVL Tree
+
+uses a 2 node
+must be balanced.
+A tree is balanced if all it's nodes are balanced
+A node is balnced if it's left and right subtrees depth are within 1
+Balanced - root on left has a depth of 1 node, on right has a depth of 2(depths are within 1)
+
+Many Items Per Node B Tree
+
+Really good on hard drives, bad on RAM
+Use when data is on hard drive
+
+Hash Table Algorithm
+
+Inserting, Deleting, Exists (Big-O) - 1
+BST - Finding max item, min item, itam after item, between item (Big-O) - Log_2 N
+Hash Table - Finding max item, min item, itam after item, between item (Big-O) - N
