@@ -517,3 +517,24 @@ Hash Table Algorithm
 Inserting, Deleting, Exists (Big-O) - 1
 BST - Finding max item, min item, itam after item, between item (Big-O) - Log_2 N
 Hash Table - Finding max item, min item, itam after item, between item (Big-O) - N
+
+11-10
+
+DO PRACTICE TEST #2 (not 2,3) and work on has assignment
+(11-12 discuss practice and finish hash, 11-15 hash assignment due)
+(11-17 test 2 is taken in class, 11-19 begin graph assignment which is due december 5)
+
+Hash Table - 
+
+Make a data base double the size of the items you'll add + number that brings it to it's closest prime.
+
+Hash function - takes whatever object is given and find a way to reduce it to fit in the data sets range
+index == hash(item)%(tablesize+neareastprime)(variable tablesize = data sets range)
+(issue is sometime you'll have collisions which is when there are 2 items with same index)
+
+Index is not where they'll go, but where they want to go.
+If that index is full you will go to next available one until end, when you loop
+
+BIGGEST ENEMY OF HASH IS CLUSTERING. Meaning areas where a bunch of items want to go.
+
+Use None to represent an unused slot(never used) and use false to show that someone's been there and skip.
