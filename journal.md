@@ -520,7 +520,7 @@ Hash Table - Finding max item, min item, itam after item, between item (Big-O) -
 
 11-10
 
-DO PRACTICE TEST #2 (not 2,3) and work on has assignment
+DO PRACTICE TEST #2 (not 2,3) and work on hash assignment
 (11-12 discuss practice and finish hash, 11-15 hash assignment due)
 (11-17 test 2 is taken in class, 11-19 begin graph assignment which is due december 5)
 
@@ -538,3 +538,13 @@ If that index is full you will go to next available one until end, when you loop
 BIGGEST ENEMY OF HASH IS CLUSTERING. Meaning areas where a bunch of items want to go.
 
 Use None to represent an unused slot(never used) and use false to show that someone's been there and skip.
+
+11-12-25
+
+Possible quiz items
+
+Code part you'll do BST, LinkedList, Hash, and is prime.
+(For BST you won't do delete, insert, __iter_ _)
+
+Practice 
+linked list with circular pointer, it makes inserting and poping order 1.
