@@ -550,3 +550,37 @@ Practice
 linked list with circular pointer, it makes inserting and poping order 1.
 
 11-19-25
+
+Fibonaci Sequence
+Hasing
+    Hashing Names
+    Linear Probing
+    Quadratic Probing
+    Double Hash
+    Seperate Chaining
+    Why Table Size Should Be Prime
+
+Fib Sequence (for an index = fib of 2 numbers prior added up) -
+Recurssion in a Fib Sequence = BigO(1.6^n) if all on one side
+Matrix Fib Sequence = BigO()
+
+Hashing Names (Hashing something that isn't a number)
+Make every non-number have a value including things like "@ , . , _ , -, etc."
+??????
+
+Linear Probig - Looking if something is at a given index, if so then look 1 place ahead
+
+Quadratic Probing - If something is at the index, 1^2, 2^2, 3^2, 4^2. (taking bigger steps aftereach) Good for clustering, not so much when one node has alot trying to go into it
+
+Double Hash - 1st hash (key = hash(item), ->, index = key%self.tsize), 2nd hash (key = hash(item), ->, index = key%self.tsize, ->, if self.table[index] = full, ->, skip = key%101*100 (Random number from 100 - 200))
+really good for clustering
+if you use a prime number for self.tsize, double hashing will go through each node in a list.
+
+Seperate Chaining - if a nodes full make it a BST/2-3 Tree with all the names
+
+Graphs are made of vertices(points) and edges(lines/paths to vertices)
+Graphs can be weighted, directional, and have any information added to
+Graphs must have specific indexs(unique)
+It's important to find how to get to a vertice in the best way.
+To find a path with only indexes on vertices, you pick path with least hops(vertice to vertice)
+To find path of weighted graph(edges have values), pick path with least of sum of edges.
