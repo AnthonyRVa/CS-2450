@@ -548,3 +548,5 @@ Code part you'll do BST, LinkedList, Hash, and is prime.
 
 Practice 
 linked list with circular pointer, it makes inserting and poping order 1.
+
+11-19-25
