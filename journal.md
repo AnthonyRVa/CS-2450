@@ -584,3 +584,10 @@ Graphs must have specific indexs(unique)
 It's important to find how to get to a vertice in the best way.
 To find a path with only indexes on vertices, you pick path with least hops(vertice to vertice)
 To find path of weighted graph(edges have values), pick path with least of sum of edges.
+
+12/1/25
+
+cs2420 final notes
+(No Infix, Postfix (graph assignment), coordinate transformation, polar coordinates, no 2-3-4 trees, no maze solving, there are graphs questions)
+
+check chem 1210 notebook
